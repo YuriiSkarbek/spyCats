@@ -1,7 +1,6 @@
 <template>
   <div class="start">
-      <font-awesome-icon icon="user-secret" class="start-icon"/>
-      <div class="start-text">{{name}}</div>
+      <router-link to="/play" class="start__play">Play Game</router-link>
     </div>
 </template>
 
@@ -27,15 +26,33 @@ export default {
   height: 100vh;
 }
 
-.start-icon{
+.start__icon{
   font-size: 154px;
 }
 
-.start-text{
+.start__text{
   font-size: 32px;
   width: 100%;
   text-align: center;
   margin-top: 15px;
   font-weight: 300;
+}
+
+.start__play{
+  display: block;
+  border: 1px solid #fafafa;
+  padding: 6px 24px;
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: .4s;
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.start__play:hover{
+  background: #fafafa;
+  color: rgb(44, 44, 44);
 }
 </style>
